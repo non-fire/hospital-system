@@ -7,5 +7,5 @@ import java.util.List;
 import java.util.Map;
 
 public interface GetInspectionItemListService {
-    List<InspectionItem> getList(Map<String, String> data);
+    List<InspectionItem> getList();
 }

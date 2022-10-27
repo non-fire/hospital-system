@@ -15,8 +15,8 @@ public class GetInspectionItemListController {
     @Autowired
     private GetInspectionItemListService getInspectionItemListService;
 
-    @GetMapping("/user/photo/getlist")
-    public List<InspectionItem> getList(@RequestParam Map<String, String> data) {
-        return getInspectionItemListService.getList(data);
+    @GetMapping("/user/item/getlist/")
+    public List<InspectionItem> getList() {
+        return getInspectionItemListService.getList();
     }
 }

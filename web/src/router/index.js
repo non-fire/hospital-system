@@ -2,6 +2,7 @@ import { createRouter, createWebHistory } from 'vue-router'
 import UserAccountLoginView from '../views/user/account/UserAccountLoginView'
 import UserAccountRegisterView from '../views/user/account/UserAccountRegisterView'
 import WelcomePage from '../views/mainpage/WelcomePage'
+import ChooseItem from '../views/mainpage/ChooseItem'
 
 import store from '../store/index'
 
@@ -10,6 +11,11 @@ const routes = [
     path: "/",
     name: "home",
     component: WelcomePage,
+  },
+  {
+    path: "/choose/item/",
+    name: "choose_item",
+    component: ChooseItem,
   },
   {
     path: "/user/account/login/",

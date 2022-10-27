@@ -20,15 +20,13 @@ public class GetInspectionItemListServiceImpl implements GetInspectionItemListSe
         private InspectionItemMapper inspectionItemMapper;
 
     @Override
-    public List<InspectionItem> getList(Map<String, String> data) {
+    public List<InspectionItem> getList() {
         UsernamePasswordAuthenticationToken authenticationToken = (UsernamePasswordAuthenticationToken) SecurityContextHolder.getContext().getAuthentication();
         UserDetailsImpl loginUser = (UserDetailsImpl) authenticationToken.getPrincipal();
         User user = loginUser.getUser();
 
-        Integer itemId = Integer.parseInt(data.get("item_id"));
         QueryWrapper<InspectionItem> queryWrapper = new QueryWrapper<>();
-        queryWrapper.eq("item_id", itemId);
-
+        queryWrapper.isNotNull("id");
         return inspectionItemMapper.selectList(queryWrapper);
 
     }

@@ -12,9 +12,10 @@
                 </div>
                 <div class="mb-3">
                     <label for="sex" class="form-label">性别</label>
-                    <Select v-model="sex" style="width:280px; height: 35px" id="sex" size="large" placeholder="请选择性别">
-                        <Option v-for="item in cityList" :value="item.value" :key="item.value">{{ item.label }}</Option>
-                    </Select>
+                    <select class="form-select" aria-label="Default select example" placeholder="请选择性别">
+                        <option value="0">男</option>
+                        <option value="1">女</option>
+                    </select>
                 </div>
                 <div class="mb-3">
                     <label for="age" class="form-label">年龄</label>

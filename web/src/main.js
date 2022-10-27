@@ -4,7 +4,7 @@ import App from './App.vue'
 import router from './router'
 import store from './store'
 import 'view-ui-plus/dist/styles/viewuiplus.css'
-import { Select } from 'view-ui-plus';
+import { Checkbox } from 'view-ui-plus';
 
 const app = createApp(App)
 
@@ -12,4 +12,4 @@ app.use(store)
   .use(router)
   .use(ViewUIPlus)
   .mount('#app')
-  app.component('Select', Select); 
+  app.component('Checkbox', Checkbox); 
